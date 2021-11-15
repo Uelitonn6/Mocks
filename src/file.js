@@ -17,7 +17,7 @@ class File {
     static async getFileContent(filePath) {
         const fileName = join(__dirname, filePath)
         return (await readFile(fileName)).toString('utf8')
-    }
+    } 
 
     static isValid(csvString, options = DEFAULT_OPTION) {
         const [ header, ...fileWithoutHeader ] = csvString.split('\n')
